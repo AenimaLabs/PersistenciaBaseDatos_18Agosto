@@ -1,4 +1,4 @@
-package com.example.persistenciabasedatos_18agosto
+package com.example.persistenciabasedatos_18agosto.model
 
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo

@@ -1,6 +1,7 @@
-package com.example.persistenciabasedatos_18agosto
+package com.example.persistenciabasedatos_18agosto.database
 
 import androidx.room.*
+import com.example.persistenciabasedatos_18agosto.model.Task
 
 @Dao
 interface TaskDAO {
