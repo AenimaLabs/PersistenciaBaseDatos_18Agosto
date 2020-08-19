@@ -1,5 +1,6 @@
 package com.example.persistenciabasedatos_18agosto.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.persistenciabasedatos_18agosto.model.Task
 
@@ -7,10 +8,10 @@ import com.example.persistenciabasedatos_18agosto.model.Task
 interface TaskDAO {
 
     @Insert (onConflict = OnConflictStrategy.REPLACE)
-    fun insertTask(task: Task)
+    suspend fun insertTask(task: Task)
 
     @Insert
-    fun inserMultipleTask (list: List<Task>)
+    fun insertMultipleTask (list: List<Task>)
 
     @Update
     fun updateTask(task: Task)
@@ -19,7 +20,7 @@ interface TaskDAO {
     fun deleteOneTask (task: Task)
 
     @Query ("Select * FROM task_table ORDER BY idTask ASC")
-    fun getAllTask(): List<Task>
+    fun getAllTask(): LiveData<List<Task>>
 
 
 }

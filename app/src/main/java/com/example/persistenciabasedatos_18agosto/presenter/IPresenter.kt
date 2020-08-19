@@ -2,7 +2,8 @@ package com.example.persistenciabasedatos_18agosto.presenter
 
 import com.example.persistenciabasedatos_18agosto.model.Task
 
-interface TaskViewPresenter {
+interface IPresenter {
 
-    fun showAllTask(list : List<Task>)
+    fun inserTask(task: Task)
+    fun getAllTask()
 }
